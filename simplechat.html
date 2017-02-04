@@ -1,0 +1,81 @@
+<head>
+    <title>GeoChat Edit</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="container">
+</div>
+</body>
+
+<template name="home">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-offset-2">
+                <div class="jumbotron">
+                    <form class="form-inline">
+                        <div class="form-group" style="vertical-align: top">
+                            
+                        </div>
+                        {{#each bubbles}}
+                          {{> bubbleLi}}
+                        {{/each}}
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
+          {{> map}}
+        </div>
+    </div>
+</template>
+<template name='map'>
+  <div id='map'>
+  </div>
+</template>
+<template name="bubbles">
+</template>
+<template name="bubbleLi">
+  <p> <a href='/{{id}}?username={{username}}'>{{name}}</a></p>
+</template>
+<template name="room">
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-offset-2" style="height: 400px;">
+                {{#if avatar }}
+                    <div class="box box-info direct-chat direct-chat-info">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Your Bubble: {{roomId}}</h3>
+
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                </button>
+                                <!-- In box-tools add this button if you intend to use the contacts pane -->
+                                <button class="btn btn-box-tool" data-toggle="tooltip" title="Contacts"
+                                        data-widget="chat-pane-toggle"><i class="fa fa-comments"></i></button>
+                                <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        {{>SimpleChatWindow roomId=roomId username=username avatar=avatar beep=true limit=5 }}
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class=" col-md-6 col-md-offset-3">
+              <a href='/'>Nearby Rooms </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-md-6 col-md-offset-3">
+                <h3>Share this link to bubble: http://simer.link:3000{{pathFor 'room' roomId=roomId }}</h3>
+            </div>
+        </div>
+    </div>
+</template>

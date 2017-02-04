@@ -1,0 +1,66 @@
+/home/ec2-user/.meteor/packages/meteor-tool/.1.4.2.19amxee++os.linux.x86_64+web.browser+web.cordova/mt-os.linux.x86_64/isopackets/ddp/npm/node_modules/meteor/promise/node_modules/meteor-promise/promise_server.js:190
+      throw error;
+      ^
+
+RangeError: Invalid array buffer length
+    at new ArrayBuffer (native)
+    at C_MINISAT (packages/logic-solver.js:22:20101)
+    at new MiniSat (packages/logic-solver.js:93:21)
+    at new Logic.Solver (packages/logic-solver.js:620:19)
+    at packages/constraint-solver.js:1575:26
+    at Function.time (/tools/tool-env/profile.js:305:10)
+    at [object Object].CS.Solver._getAnswer (packages/constraint-solver.js:1574:11)
+    at packages/constraint-solver.js:1561:17
+    at Function.time (/tools/tool-env/profile.js:305:10)
+    at [object Object].CS.Solver.getAnswer (packages/constraint-solver.js:1560:23)
+    at packages/constraint-solver.js:2258:25
+    at Object.Logic.disablingAssertions (packages/logic-solver.js:390:12)
+    at Function.CS.PackagesResolver._resolveWithInput (packages/constraint-solver.js:2257:16)
+    at [object Object].CS.PackagesResolver.resolve (packages/constraint-solver.js:2221:34)
+    at /tools/project-context.js:518:35
+    at Function.time (/tools/tool-env/profile.js:305:10)
+    at /tools/project-context.js:514:19
+    at /tools/utils/buildmessage.js:359:18
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:352:34
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:350:23
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at Object.enterJob (/tools/utils/buildmessage.js:324:26)
+    at /tools/project-context.js:486:20
+    at /tools/packaging/catalog/catalog.js:100:5
+    at /tools/utils/buildmessage.js:271:13
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:264:29
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:262:18
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:253:23
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at Object.capture (/tools/utils/buildmessage.js:252:19)
+    at Object.catalog.runAndRetryWithRefreshIfHelpful (/tools/packaging/catalog/catalog.js:99:31)
+    at ProjectContext._resolveConstraints (/tools/project-context.js:485:13)
+    at /tools/project-context.js:268:9
+    at /tools/utils/buildmessage.js:359:18
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:352:34
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:350:23
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at Object.enterJob (/tools/utils/buildmessage.js:324:26)
+    at ProjectContext._completeStagesThrough (/tools/project-context.js:258:18)
+    at /tools/project-context.js:250:12
+    at Function.run (/tools/tool-env/profile.js:490:12)
+    at ProjectContext.prepareProjectForBuild (/tools/project-context.js:249:13)
+    at /tools/cli/commands-packages.js:2036:20
+    at /tools/utils/buildmessage.js:271:13
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:264:29
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:262:18
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at /tools/utils/buildmessage.js:253:23
+    at [object Object].withValue (/tools/utils/fiber-helpers.js:89:14)
+    at Object.capture (/tools/utils/buildmessage.js:252:19)
+    at Command.func (/tools/cli/commands-packages.js:2035:27)
+    at /tools/cli/main.js:1454:23
