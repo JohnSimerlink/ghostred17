@@ -22,6 +22,12 @@
                         {{#each bubbles}}
                           {{> bubbleLi}}
                         {{/each}}
+                        <ul>
+                        {{#each chats}}
+                          {{> chat}}
+                        {{/each}}
+                        </ul>
+                        <p> <a href='/create'><b>Create a Room</b></a></p>
                     </form>
                 </div>
             </div>
@@ -37,6 +43,9 @@
   </div>
 </template>
 <template name="bubbles">
+</template>
+<template name="chat">
+<li> {{name}} </li>
 </template>
 <template name="bubbleLi">
   <p> <a href='/{{id}}?username={{username}}'>{{name}}</a></p>

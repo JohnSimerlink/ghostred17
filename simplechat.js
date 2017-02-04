@@ -1,4 +1,6 @@
-
+const Chats = new Mongo.Collection('chats');
+Chats.insert({ name: "GE Building"});
+Chats.insert({ name: "Riverfront"});
 import {SimpleChat} from 'meteor/cesarve:simple-chat/config'
 SimpleChat.configure({
     beep: false,
@@ -49,8 +51,12 @@ if (Meteor.isClient) {
         },
         'bubbles': function () {
           return bubbles;
+        },
+        'chats': function () {
+          return Chats.find({});
         }
     });
+    
     Template.home.onRendered(function () {
       //alert("home renderd");
     });
@@ -83,7 +89,8 @@ FlowRouter.route("/", {
     name: "home",
     action: function () {
         BlazeLayout.render("home");
-    }
+    },
+    waitOn: function() { return Meteor.subscribe('chats'); }
 })
 FlowRouter.route("/:roomId", {
     name: "room",
